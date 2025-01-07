@@ -7,7 +7,7 @@ import { aboutData, aboutText, downloadIcon, arrowLeftIcon } from "@/assets";
 
 const About = () => {
   return (
-    <div className="min-h-screen px-[6rem] flex flex-col items-center justify-center">
+    <div className="min-h-screen px-32 flex flex-col items-center justify-center">
       <Heading text={"About me"} />
       <div className="w-full flex items-center justify-between md:justify-center">
         <Image
@@ -17,17 +17,17 @@ const About = () => {
           width={400}
           className="w-[18.75rem] lg:w-[12.5rem] md:hidden"
         />
-        <div className="max-w-[50rem] rounded-xl bg-zinc-100 p-[1.25rem] text-justify">
-          <span className="absolute -left-[1.25rem] top-[5rem] scale-[2.5] text-zinc-100 md:hidden">
+        <div className="relative max-w-[50rem] rounded-xl bg-zinc-100 p-5 text-justify">
+          <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden">
             {arrowLeftIcon}
           </span>
-          <p className="text-lg font-light text-gray-700 first-letter:pl-[0.1875rem] lg:text-[1rem] sm:text-[0.875rem]">
+          <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[1rem] sm:text-[0.875rem]">
             {aboutText}
           </p>
           <a
             href="/nick-cv.pdf"
             download=""
-            className="w-max flex items-center gap-x-[0.5rem] mt-[1.5rem] rounded-full border-gray-300 bg-red-400 px-[0.75rem] py-[0.5rem] font-light text-white hover:bg-red-500 transition-colors"
+            className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-gray-300 bg-red-400 px-3 py-2 font-light text-white hover:bg-red-500 transition-colors"
           >
             <span>Download CV</span>
             <span className="text-xl">{downloadIcon}</span>

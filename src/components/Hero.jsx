@@ -42,7 +42,7 @@ const Hero = () => {
       onMouseEnter={handleMouseEnter}
     >
       <div>
-        <div className="flex flex-col items-center justify-center gap-y-[0.75rem] font-light capitalize">
+        <div className="flex flex-col items-center justify-center gap-y-3 font-light capitalize">
           <motion.div
             className="flex items-center justify-center"
             style={{
@@ -67,19 +67,19 @@ const Hero = () => {
                 y: buttonHover ? -2.5 : 0, // 40px -> 2.5rem
               }}
               transition={{ opacity: { delay: 0.4 } }}
-              className="absolute text-[1.875rem] font-semibold text-white"
+              className="absolute text-3xl font-semibold text-white"
             >
               Hi
             </motion.span>
           </motion.div>
-          <h1 className="text-center text-[1.875rem] font-bold tracking-wider text-gray-500 sm:text-[1.25rem]">
+          <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 ">
             My name is Vo Hieu &
           </h1>
-          <p className="text-[1rem] tracking-wider text-gray-700">
+          <p className="text-lg tracking-wider text-gray-700">
             I like animations 😁
           </p>
         </div>
-        <div className="mt-[2rem] flex justify-center gap-x-[2.5rem] text-[1.875rem] text-yellow-600 sm:text-[1.25rem]">
+        <div className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 ">
           {heroIcons.map((icon, i) => (
             <a
               href="#"
@@ -94,7 +94,7 @@ const Hero = () => {
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
           href="#"
-          className="mx-auto mt-[1.75rem] block w-max rounded-lg bg-red-400 px-[0.1875rem] py-[0.0625rem] font-light capitalize tracking-wider text-white hover:bg-red-500 transition-colors"
+          className="mx-auto mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider text-white hover:bg-red-500 transition-colors"
         >
           Talk to me
         </a>
