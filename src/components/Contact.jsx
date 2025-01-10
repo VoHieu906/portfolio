@@ -23,8 +23,8 @@ const Contact = () => {
           />
         </motion.div>
         <motion.form
-          initial={{ opacity: 0, x: 150 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="w-[37.5rem] lg:w-[25rem] sm:w-full flex flex-col gap-3"
