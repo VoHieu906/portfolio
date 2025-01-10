@@ -5,7 +5,7 @@ import { pricingPlans, checkIcon } from "@/assets";
 import { motion } from "framer-motion";
 const PricingPlans = () => {
   return (
-    <div className="py-20 px-32">
+    <div className="py-20 px-32" id="pricing">
       <Heading text={"Pricing  Plans"} />
       <div className="h-full flex lg:flex-col items-center justify-between gap-8">
         {pricingPlans.map((plan, i) => (

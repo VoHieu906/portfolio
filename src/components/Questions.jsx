@@ -5,7 +5,7 @@ import Question from "./sub/Question";
 import { questions } from "@/assets";
 const Questions = () => {
   return (
-    <div className="py-20 px-32">
+    <div id="questions" className="py-20 px-32">
       <Heading text={"Questions & Answers"} />
       <div>
         <ul className="flex flex-col gap-y-3">

@@ -26,7 +26,7 @@ const Reviews = () => {
     prevIndex.current = index;
   }, [index]);
   return (
-    <div className="my-20 px-32">
+    <div className="my-20 px-32" id="reviews">
       <Heading text={"Reviews"} />
       <div className="flex flex-col items-center justify-center">
         <motion.div
