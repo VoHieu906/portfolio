@@ -9,10 +9,13 @@ import PricingPlans from "@/components/PricingPlans";
 import Contact from "@/components/Contact";
 import Questions from "@/components/Questions";
 import Navbar from "@/components/Navbar";
+import Toggle from "@/components/sub/Toggle";
 import { useEffect, useRef, useState } from "react";
+import Load from "@/components/sub/Load";
 export default function Home() {
   const [id, setId] = useState(0);
   const compsRef = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -30,20 +33,24 @@ export default function Home() {
       observer.observe(comp);
     });
   }, []);
+
   return (
     <>
-      <Navbar id={id} />
-      <div ref={compsRef}>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Reviews />
-        <Projects />
-        <PricingPlans />
-        <Contact />
-        <Questions />
-      </div>
+      <Load />
+      <Toggle>
+        <Navbar id={id} />
+        <div className="w-min" ref={compsRef}>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Reviews />
+          <Projects />
+          <PricingPlans />
+          <Contact />
+          <Questions />
+        </div>
+      </Toggle>
     </>
   );
 }

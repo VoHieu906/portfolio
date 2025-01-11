@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen px-32 flex flex-col items-center justify-center"
+      className="min-h-screen  flex flex-col items-center justify-center"
     >
       <Heading text={"About me"} />
       <div className="w-full flex items-center justify-between md:justify-center">
@@ -20,11 +20,11 @@ const About = () => {
           width={400}
           className="w-[18.75rem] lg:w-[12.5rem] md:hidden"
         />
-        <div className="relative max-w-[50rem] rounded-xl bg-zinc-100 p-5 text-justify">
-          <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden">
+        <div className="relative max-w-[50rem] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 transition-colors">
+          <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden dark:text-zinc-700 transition-colors">
             {arrowLeftIcon}
           </span>
-          <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[1rem] sm:text-[0.875rem]">
+          <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[1rem] sm:text-[0.875rem] dark:text-white">
             {aboutText}
           </p>
           <a

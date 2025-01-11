@@ -5,7 +5,7 @@ import { pricingPlans, checkIcon } from "@/assets";
 import { motion } from "framer-motion";
 const PricingPlans = () => {
   return (
-    <div className="py-20 px-32" id="pricing">
+    <div className="py-20" id="pricing">
       <Heading text={"Pricing  Plans"} />
       <div className="h-full flex lg:flex-col items-center justify-between gap-8">
         {pricingPlans.map((plan, i) => (
@@ -20,16 +20,16 @@ const PricingPlans = () => {
               scale: { duration: 0.15 },
             }}
             key={i}
-            className={`sm:w-[16.875rem]  flex flex-col gap-y-6 p-6 border border-red-400 rounded-xl text-gray-600 ${
+            className={`sm:w-[16.875rem]  flex flex-col gap-y-6 p-6 border border-red-400 rounded-xl text-gray-600 dark:bg-zinc-700 transition-colors ${
               i === 1
                 ? "w-[23.125rem] xl:w-[20rem] bg-white"
                 : "w-[21.875rem] xl:w-[18.75rem] bg-zinc-50"
             }`}
           >
-            <h1 className="text-3xl lg:text-xl font-light tracking-wide text-center">
+            <h1 className="text-3xl lg:text-xl font-light tracking-wide text-center dark:text-white transition-colors">
               {plan.title}
             </h1>
-            <span className="text-2xl lg:text-xl text-center">
+            <span className="text-2xl lg:text-xl text-center dark:text-white transition-colors">
               {plan.pricing}
             </span>
             <ul className="flex flex-col gap-y-2">
@@ -42,11 +42,13 @@ const PricingPlans = () => {
                   >
                     {checkIcon}
                   </span>
-                  <li className="font-light tracking-wide">{feature}</li>
+                  <li className="font-light tracking-wide dark:text-white transition-colors">
+                    {feature}
+                  </li>
                 </div>
               ))}
             </ul>
-            <p className="text-sm font-light text-center">
+            <p className="text-sm font-light text-center dark:text-gray-200 transition-colors">
               <span className="font-semibold">Ideal for: </span>
               {plan.recommended}
             </p>

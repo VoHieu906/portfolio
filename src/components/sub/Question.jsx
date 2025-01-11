@@ -28,7 +28,7 @@ const Question = ({ data, index }) => {
     >
       <h1
         onClick={() => setShow(!show)}
-        className={`flex items-center  text-xl font-extralight text-gray-800 hover:text-yellow-600 tracking-wide cursor-pointer ${
+        className={`flex items-center  text-xl font-extralight text-gray-800 hover:text-yellow-600 tracking-wide cursor-pointer dark:text-white  dark:hover:text-yellow-600 ${
           show && "border-b text-yellow-600"
         }`}
       >
@@ -50,7 +50,7 @@ const Question = ({ data, index }) => {
           stiffness: show ? 250 : 50,
           opacity: { delay: show ? 0.2 : 0 },
         }}
-        className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3"
+        className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 dark:text-gray-200"
       >
         {data.answer}
       </motion.p>
