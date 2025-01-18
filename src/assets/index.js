@@ -15,30 +15,29 @@ export const heroIcons = [
 
 // AboutMe icons
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
-import Projector2LineIcon from "remixicon-react/Projector2LineIcon";
-import GroupLineIcon from "remixicon-react/GroupLineIcon";
-import AwardFillIcon from "remixicon-react/AwardFillIcon";
+import MailFillIcon from "remixicon-react/MailFillIcon";
+import MapPin2LineIcon from "remixicon-react/MapPin2LineIcon";
 
 export const aboutData = [
   {
-    title: "Github Repos",
+    title: "Github",
     amount: 348,
     icon: <GithubFillIcon />,
   },
   {
-    title: "Successful Projects",
+    title: "0833799018",
     amount: 227,
-    icon: <Projector2LineIcon />,
+    icon: <ContactsBook2LineIcon />,
   },
   {
-    title: "Satisfied clients",
+    title: "vohieutd09@gmail.com",
     amount: 176,
-    icon: <GroupLineIcon />,
+    icon: <MailFillIcon />,
   },
   {
-    title: "Awards and Recognition",
+    title: "District 7, Ho Chi Minh City",
     amount: 107,
-    icon: <AwardFillIcon />,
+    icon: <MapPin2LineIcon />,
   },
 ];
 
@@ -49,26 +48,19 @@ export const downloadIcon = <DownloadLineIcon />;
 export const arrowLeftIcon = <ArrowLeftSFillIcon />;
 
 export const aboutText =
-  " Hi, I'm Nick, a web developer & designer. I blend the technical  skills of web development with the creative aspects of web design. I code in HTML, CSS, JavaScript, React, NextJS... to build functional and responsive websites, while also using design tools like Photoshop and Figma to create visually appealing and user-friendly  interfaces. My role allows me to ensure that websites not only work well but also look great and provide an excellent user experience.";
+  "Hello, I am Võ Nguyễn Trường Hiếu. I am currently a 7th-semester student at FPT Polytechnic College, majoring in Information Technology with a specialization in web programming. I code using HTML, CSS, React, TypeScript, Tailwind, Next.js, and more. I am passionate about building modern, responsive web applications and always strive to improve my skills. In addition to my technical expertise, I enjoy collaborating with others to create innovative solutions. My current focus is on enhancing user experiences and optimizing web performance. I look forward to contributing to exciting projects and expanding my knowledge in the field of web development.";
+
 // End of AboutMe icons
 
 // Skills
 export const skillsData = [
   {
-    name: "Figma",
-    icon: "/skills/figma.png",
+    name: "ReactJS",
+    icon: "/skills/react.png",
   },
   {
-    name: "Photoshop",
-    icon: "/skills/photoshop.png",
-  },
-  {
-    name: "Blender",
-    icon: "/skills/blender.png",
-  },
-  {
-    name: "VS Code",
-    icon: "/skills/vscode.png",
+    name: "TypeScript",
+    icon: "/skills/ts.png",
   },
   {
     name: "HTML",
@@ -90,14 +82,7 @@ export const skillsData = [
     name: "Vite",
     icon: "/skills/vite.png",
   },
-  {
-    name: "ReactJS",
-    icon: "/skills/react.png",
-  },
-  {
-    name: "TypeScript",
-    icon: "/skills/ts.png",
-  },
+
   {
     name: "AI",
     icon: "/skills/ai.png",
@@ -115,12 +100,12 @@ export const skillsData = [
     icon: "/skills/nextjs.png",
   },
   {
-    name: "NodeJS",
-    icon: "/skills/nodejs.png",
+    name: "PostgreSql",
+    icon: "/skills/elephant.png",
   },
   {
-    name: "MongoDB",
-    icon: "/skills/mongodb.png",
+    name: "PHP",
+    icon: "/skills/php.png",
   },
   {
     name: "Github",
@@ -136,132 +121,82 @@ export const copyRightIcon = <CopyrightLineIcon />;
 // Experience
 export const experienceData = [
   {
-    year: 1,
+    year: 2024,
     title: "Foundation and Basics",
-    education:
-      "High School Diploma: Focus on computer science, mathematics, and art/design courses.",
+    education: "FPT Polytechnic College",
     experience: [
-      "Basic HTML/CSS: Learn through online tutorials and courses.",
-      "Personal Projects: Create simple personal websites or blogs.",
+      "Faculty: Information Technology",
+      "Major: Web Programming",
+      "Grade Point Average: 8.5",
     ],
   },
   {
-    year: 2,
-    title: "Advanced Learning and Early Experience",
-    education:
-      "Associate’s Degree in Web Development or Design: Enroll in a 2-year program covering web development and design principles.",
+    year: 2024,
+    title: "Internship at FPT College with CDS Enterprise. ",
+    education: "Internship",
     experience: [
-      "Freelance Work: Take on small freelance projects to build a portfolio.",
-      "Online Courses and Certifications: Learn JavaScript, responsive design, and UX/UI design.",
-    ],
-  },
-  {
-    year: 3,
-    title: "Specialized Education and Real-World Application",
-    education:
-      "Online Courses and Bootcamps: Focus on specialized areas like front-end frameworks (React, Angular) and back-end technologies (Node.js).",
-    experience: [
-      "Internships: Secure internships with tech companies or design agencies.",
-      "Contribute to Open Source: Collaborate on open-source projects.",
-    ],
-  },
-  {
-    year: 4,
-    title: "Building Expertise and Expanding Skills",
-    education:
-      "Certifications: Obtain certifications in advanced web technologies.",
-    experience: [
-      "Full-Time Position: Work as a junior web developer or designer.",
-      "Portfolio Development: Continuously update your portfolio with professional and personal projects.",
-    ],
-  },
-  {
-    year: 5,
-    title: "Mastery and Leadership",
-    education:
-      "Workshops and Conferences: Attend industry events to stay updated.",
-    experience: [
-      "Senior Position: Aim for a senior web developer or lead designer role, mentoring junior colleagues.",
-      "Freelance and Consulting: Consider starting a freelance business or consulting practice.",
+      "-Working with the members of the company",
+      "-Implementing simple interfaces and functionalities such as account management and inventory management.",
     ],
   },
 ];
 
 export const projectsData = [
   {
-    name: "SparkleGrove.com",
-    desc: "A lifestyle blog featuring DIY crafts, home decor ideas, and inspiration for creating a cozy and stylish living space.",
-    url: "/projects/image-1.jpg",
-    tech: ["Figma", "Photoshop", "HTML"],
+    name: "ManagementApp",
+    desc: "A project to manage your work ",
+    url: "/projects/managementapp.png",
+    qr: "/projects/qrmanagementapp.png",
+    github: "https://github.com/VoHieu906/management-app",
+    link: "https://main.d1tasadyl387pj.amplifyapp.com/",
+    tech: ["TypeScript", "Tailwind", "PostgreSql"],
   },
   {
-    name: "TechTrekker.net",
-    desc: "A technology news and review site covering the latest gadgets, software updates, and trends in the tech industry.",
-    url: "/projects/image-2.jpg",
-    tech: ["Figma", "Photoshop"],
+    name: "Klimate",
+    desc: "A project display information about the weather ",
+    url: "/projects/klimate.png",
+    qr: "/projects/qrklimate.png",
+    github: "https://github.com/VoHieu906/Klimate",
+    link: "klimate-drab.vercel.app",
+    tech: ["NextJS", "TypeScript", "Tailwind", "ShadCN"],
   },
   {
-    name: "CozyNestHomes.org",
-    desc: "A resource for homeowners and renters alike, offering tips on interior design, home improvement projects, and sustainable living practices.",
-    url: "/projects/image-3.jpg",
-    tech: ["HTML", "CSS", "JavaScript"],
+    name: "Carshowcase",
+    desc: "A website showing car",
+    url: "/projects/carshowcase.png",
+    qr: "",
+    github: "https://github.com/VoHieu906/car-showcase",
+    link: "",
+    tech: ["NextJS", "TypeScript", "Tailwind"],
   },
   {
-    name: "WanderLuxeTravels.co",
-    desc: "A travel website that provides luxury travel guides, destination reviews, and tips for planning unforgettable vacations.",
-    url: "/projects/image-4.jpg",
-    tech: ["HTML", "CSS", "JavaScript", "TailwindCSS"],
+    name: "ZingMp3",
+    desc: "A clone of the ZingMP3 website",
+    url: "/projects/zingmp3.png",
+    qr: "",
+    github: "https://github.com/VoHieu906/TodoList-Zingmp3",
+    link: "",
+    tech: ["React"],
   },
   {
-    name: "ByteBoosters.io",
-    desc: "A tech startup specializing in software development, offering innovative solutions and services for businesses looking to enhance their digital presence.",
-    url: "/projects/image-5.jpg",
-    tech: ["Figma", "ReactJS", "TailwindCSS", "CSS"],
-  },
-  {
-    name: "GreenLeafGardens.biz",
-    desc: "An online store and community hub for gardening enthusiasts, featuring a wide range of plants, gardening tools, and expert advice.",
-    url: "/projects/image-6.jpg",
-    tech: ["ReactJS", "TailwindCSS", , "CSS", "FramerMotion"],
-  },
-  {
-    name: "PixelPerfectDesigns.info",
-    desc: "A graphic design portfolio showcasing the work of a freelance designer, including branding, web design, and illustration projects.",
-    url: "/projects/image-7.jpg",
-    tech: ["NextJS", "FramerMotion"],
-  },
-  {
-    name: "HarmonyHealthHub.com",
-    desc: " A wellness website focused on holistic health, offering articles on nutrition, fitness, mental health, and alternative therapies.",
-    url: "/projects/image-8.jpg",
-    tech: ["NextJS", "ReactJS", "FramerMotion"],
-  },
-  {
-    name: "StellarSkiesAstronomy.org",
-    desc: "An educational site dedicated to astronomy, providing resources for amateur astronomers, star maps, and information on celestial events.",
-    url: "/projects/image-9.jpg",
-    tech: ["ReactJS", "JavaScript", "ThreeJS"],
-  },
-  {
-    name: "UrbanEatsDelights.com",
-    desc: "An educational site dedicated to astronomy, providing resources for amateur astronomers, star maps, and information on celestial events.",
-    url: "/projects/image-10.jpg",
-    tech: ["NextJS", "ThreeJS"],
+    name: "CloudLab",
+    desc: "An e-commerce website specializing in laptops and phones.",
+    url: "/projects/cloudlab.png",
+    qr: "",
+    github: "https://github.com/VoHieu906/CloudLab",
+    link: "",
+    tech: ["React"],
   },
 ];
 
 export const projectsButton = [
   "All",
-  "Figma",
-  "Photoshop",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "ReactJS",
-  "TailwindCSS",
+  "React",
+  "Tailwind",
+  "ShadCN",
   "NextJS",
-  "FramerMotion",
-  "ThreeJS",
+  "PostgreSql",
+  "TypeScript",
 ];
 
 import Home5LineIcon from "remixicon-react/Home5LineIcon";
@@ -295,31 +230,31 @@ export const navbarData = [
     name: "Skills",
     icon: <BriefcaseLineIcon />,
   },
-  {
-    id: "reviews",
-    name: "Reviews",
-    icon: <UserStarLineIcon />,
-  },
+  // {
+  //   id: "reviews",
+  //   name: "Reviews",
+  //   icon: <UserStarLineIcon />,
+  // },
   {
     id: "projects",
     name: "Projects",
     icon: <ProjectorLineIcon />,
   },
-  {
-    id: "pricing",
-    name: "Pricing",
-    icon: <PriceTag3LineIcon />,
-  },
-  {
-    id: "contact",
-    name: "Contact",
-    icon: <ContactsBook2LineIcon />,
-  },
-  {
-    id: "questions",
-    name: "Questions",
-    icon: <QuestionAnswerLineIcon />,
-  },
+  // {
+  //   id: "pricing",
+  //   name: "Pricing",
+  //   icon: <PriceTag3LineIcon />,
+  // },
+  // {
+  //   id: "contact",
+  //   name: "Contact",
+  //   icon: <ContactsBook2LineIcon />,
+  // },
+  // {
+  //   id: "questions",
+  //   name: "Questions",
+  //   icon: <QuestionAnswerLineIcon />,
+  // },
 ];
 
 export const questions = [

@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen py-20 " id="projects">
       <Heading text={"Projects"} />
-      <div className="flex flex-wrap items-center justify-between gap-4 py-10">
+      <div className="flex flex-wrap items-center justify-between py-10 px-2">
         {projectsButton.map((text, i) => (
           <motion.button
             key={i}
