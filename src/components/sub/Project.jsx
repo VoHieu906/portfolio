@@ -10,6 +10,7 @@ import AlertFillIcon from "remixicon-react/AlertFillIcon";
 
 const Project = ({ data, index }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -32,17 +33,35 @@ const Project = ({ data, index }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, type: "spring", stiffness: 100 }}
-        className="relative w-[21.875rem] sm:w-full h-max border border-yellow-400 rounded-lg overflow-hidden"
+        className="relative w-[21.875rem] sm:w-full h-max border border-yellow-400 rounded-lg overflow-hidden group"
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
       >
-        <div className="relative cursor-pointer" onClick={handleClick}>
+        <motion.div
+          className="relative cursor-pointer"
+          onClick={handleClick}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
           <Image
             src={data.url || "/placeholder.svg"}
             alt="Project Image"
             width={400}
             height={400}
-            className="rounded-lg opacity-75 hover:opacity-100 transition-opacity"
+            className="rounded-lg transition-all duration-300 group-hover:opacity-90 group-hover:brightness-110"
           />
-        </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+          >
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-lg font-bold mb-1">{data.name}</h3>
+              <p className="text-sm opacity-90 line-clamp-2">{data.desc}</p>
+            </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
 
       <AnimatePresence>
@@ -67,7 +86,7 @@ const Project = ({ data, index }) => {
                 </h2>
                 <button
                   onClick={closeModal}
-                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
+                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white transition-colors"
                 >
                   <CloseFillIcon className="w-6 h-6" />
                 </button>
@@ -100,30 +119,34 @@ const Project = ({ data, index }) => {
                 </p>
 
                 <div className="flex flex-col gap-3 mt-6">
-                  <a
+                  <motion.a
                     href={data.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-x-2 px-4 py-2 bg-gray-100 dark:bg-zinc-700 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-600 transition-colors group"
+                    className="flex items-center gap-x-2 px-4 py-2 bg-gray-100 dark:bg-zinc-700 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-600 transition-all duration-300 group"
                     onClick={handleLinkClick}
+                    whileHover={{ scale: 1.02, x: 4 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <GithubFillIcon className="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500" />
-                    <span className="truncate text-gray-700 dark:text-gray-200 group-hover:text-blue-500 font-medium">
+                    <GithubFillIcon className="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500 transition-colors duration-300" />
+                    <span className="truncate text-gray-700 dark:text-gray-200 group-hover:text-blue-500 font-medium transition-colors duration-300">
                       {data.github}
                     </span>
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
                     href={data.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-x-2 px-4 py-2 bg-gray-100 dark:bg-zinc-700 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-600 transition-colors group"
+                    className="flex items-center gap-x-2 px-4 py-2 bg-gray-100 dark:bg-zinc-700 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-600 transition-all duration-300 group"
                     onClick={handleLinkClick}
+                    whileHover={{ scale: 1.02, x: 4 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <GlobalFillIcon className="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500" />
-                    <span className="truncate text-gray-700 dark:text-gray-200 group-hover:text-blue-500 font-medium">
+                    <GlobalFillIcon className="w-5 h-5 text-gray-700 dark:text-gray-200 group-hover:text-blue-500 transition-colors duration-300" />
+                    <span className="truncate text-gray-700 dark:text-gray-200 group-hover:text-blue-500 font-medium transition-colors duration-300">
                       {data.link}
                     </span>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
